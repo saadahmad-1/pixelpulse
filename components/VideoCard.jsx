@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 
 import { icons } from "../constants";
 
-const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
+const VideoCard = ({ title, creator, avatar, video }) => {
   const [play, setPlay] = useState(false);
 
   return (
@@ -59,10 +59,11 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
           onPress={() => setPlay(true)}
           className="w-full h-60 rounded-xl mt-3 relative flex justify-center items-center"
         >
-          <Image
-            source={{ uri: thumbnail }}
+          <Video
+            source={{ uri: video }}
             className="w-full h-full rounded-xl mt-3"
-            resizeMode="cover"
+            resizeMode={ResizeMode.CONTAIN}
+            shouldPlay={false} // Keeps the video paused as a cover
           />
 
           <Image

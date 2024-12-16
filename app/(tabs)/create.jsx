@@ -58,9 +58,7 @@ const Create = () => {
 
   const submit = async () => {
     if (
-      (form.prompt === "") |
       (form.title === "") |
-      !form.thumbnail |
       !form.video
     ) {
       return Alert.alert("Please provide all fields");
@@ -131,7 +129,7 @@ const Create = () => {
           </TouchableOpacity>
         </View>
 
-        <View className="mt-7 space-y-2">
+        {/* <View className="mt-7 space-y-2">
           <Text className="text-base text-gray-100 font-pmedium">
             Thumbnail Image
           </Text>
@@ -157,15 +155,7 @@ const Create = () => {
               </View>
             )}
           </TouchableOpacity>
-        </View>
-
-        <FormField
-          title="AI Prompt"
-          value={form.prompt}
-          placeholder="The AI prompt of your video...."
-          handleChangeText={(e) => setForm({ ...form, prompt: e })}
-          otherStyles="mt-7"
-        />
+        </View> */}
 
         <CustomButton
           title="Submit & Publish"

@@ -56,14 +56,12 @@ const TrendingItem = ({ activeItem, item }) => {
           activeOpacity={0.7}
           onPress={() => setPlay(true)}
         >
-          <ImageBackground
-            source={{
-              uri: item.thumbnail,
-            }}
+          <Video
+            source={{ uri: item.video }}
             className="w-52 h-72 rounded-[33px] my-5 overflow-hidden shadow-lg shadow-black/40"
-            resizeMode="cover"
+            resizeMode={ResizeMode.CONTAIN}
+            shouldPlay={false} // Keeps the video paused
           />
-
           <Image
             source={icons.play}
             className="w-12 h-12 absolute"
@@ -74,6 +72,7 @@ const TrendingItem = ({ activeItem, item }) => {
     </Animatable.View>
   );
 };
+
 
 const Trending = ({ posts }) => {
   const [activeItem, setActiveItem] = useState(posts[0]);

@@ -36,8 +36,7 @@ const Welcome = () => {
 
           <View className="relative mt-5">
             <Text className="text-3xl text-white font-bold text-center">
-              Discover Endless{"\n"}
-              Possibilities with{" "}
+              Welcome to{" "}
               <Text className="text-secondary-200">Aora</Text>
             </Text>
 
@@ -49,8 +48,8 @@ const Welcome = () => {
           </View>
 
           <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
-            Where Creativity Meets Innovation: Embark on a Journey of Limitless
-            Exploration with Aora
+            Aora is a platform for creators to share their content with the
+            world.
           </Text>
 
           <CustomButton
